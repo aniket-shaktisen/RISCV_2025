@@ -1,1 +1,41 @@
-PART 1
+# Understanding System-on-Chip (SoC)
+
+## What is an SoC?  
+A **System-on-Chip (SoC)** is like a complete mini-computer built into a single chip.  
+It combines the processor, memory, input/output, and other peripherals into one compact unit.  
+This makes SoCs efficient, powerful, and ideal for small, battery-operated devices like smartphones, wearables, and IoT gadgets.  
+
+---
+
+## Components of a Typical SoC
+- **CPU (Processor):** The brain of the SoC, executes instructions and manages control.  
+- **Memory:**  
+  - RAM for temporary data.  
+  - ROM/Flash for permanent storage.  
+- **Peripherals:** Interfaces like UART, timers, GPIO, and sometimes GPU or DSP.  
+- **Interconnect/Bus:** Communication backbone that links CPU, memory, and peripherals.  
+
+---
+
+## Why BabySoC?  
+**BabySoC** is a simplified model created for learning SoC concepts.  
+- Reduces complexity while showing real SoC behavior.  
+- Includes essential modules like **RVMYTH CPU**, **PLL clock**, and **DAC output**.  
+- Lets students observe **reset operation**, **clocking**, and **dataflow** between modules.  
+
+---
+
+## Role of Functional Modelling  
+Before moving to RTL coding or chip fabrication, **functional modelling** is used to:  
+- Verify system behavior early.  
+- Catch architectural bugs before expensive design steps.  
+- Provide a clear view of how modules interact.  
+
+---
+
+## Summary  
+SoCs integrate multiple components on a single chip to achieve **compactness, efficiency, and performance**.  
+**BabySoC** acts as a teaching tool, bridging the gap between theory and real-world SoC design, making it easier to understand how modern chips are built and tested.  
+
+---
+
