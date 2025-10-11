@@ -1,1 +1,58 @@
+STA fudamentals.... notes
+
+1. Setup and Hold checks
+2. Slack
+3. Clock definitions
+4. Path-based analysis 
+
+1. Setup and Hold Timing Checks
+
+Setup Time :
+Definition: Minimum time data must be stable before the active clock edge.
+Ensures data is properly latched.
+Violation → Data is not captured correctly (timing too tight).
+
+Hold Time :
+Definition: Minimum time data must remain stable after the active clock edge.
+Ensures data doesn’t change too early.
+Violation → Data changes too soon and may corrupt the latch.
+
+2. Slack
+
+Slack = Required Time – Arrival Time
+  Positive Slack: Timing is met.
+  Zero Slack: Circuit is on the edge of violating timing.
+  Negative Slack: Timing violation exists.
+
+Separate slacks for:
+  Setup Slack: Arrival time should be ≤ Required time.
+  Hold Slack: Arrival time should be ≥ Required time.
+
+3. Clock Definitions
+
+it includes.. 
+ Clock source and period (e.g., create_clock)
+ Waveform shape (rise/fall)
+ Clock uncertainty (jitter, skew)
+ Clock latency (source/propagated delay)
+
+Clock influences:
+  Timing checks (start & end points)
+  Setup/Hold paths
+  Derating, skew, uncertainty in analysis
+
+4. Path-Based Analysis
+
+STA tools analyze timing paths from launch to capture points.
+  Launch edge: When data is launched (start of path)
+  Capture edge: When data is captured (end of path)
+Common path types:
+  Data Path: Sequential start → combinational → sequential end
+  Clock Path: Clock tree delay to launch/capture flip-flops
+Types of paths:  
+  Setup paths (check max delay)
+  Hold paths (check min delay)
+
+Path-based analysis checks every timing path individually, Captures exact behavior, including :
+  Path delays, Skew, Constraints
 
